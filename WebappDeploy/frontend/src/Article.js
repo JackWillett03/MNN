@@ -18,7 +18,7 @@ const ArticlePage = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const res = await fetch(`http://localhost:82/article/${id}`);
+        const res = await fetch(`${process.env.REACT_APP_API}/article/${id}`);
         if (!res.ok) throw new Error('Failed to fetch article');
         const data = await res.json();
         setArticle(data);
@@ -29,7 +29,7 @@ const ArticlePage = () => {
 
     const fetchComments = async () => {
       try {
-        const res = await fetch(`http://localhost:82/comment/article/${id}`);
+        const res = await fetch(`${process.env.REACT_APP_API}/comment/article/${id}`);
         if (!res.ok) throw new Error('Failed to fetch comments');
         const data = await res.json();
         setComments(data);
@@ -72,7 +72,7 @@ const ArticlePage = () => {
     };
 
     try {
-      const res = await fetch(`http://localhost:82/comment/add`, {
+      const res = await fetch(`${process.env.REACT_APP_API}/comment/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

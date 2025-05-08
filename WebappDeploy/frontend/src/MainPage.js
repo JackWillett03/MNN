@@ -79,7 +79,7 @@ const MainPage = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        let url = 'http://localhost:82/article';
+        let url = `${process.env.REACT_APP_API}/article`;
         if (selectedContinent) {
           url += `?continent=${encodeURIComponent(selectedContinent)}`;
         }

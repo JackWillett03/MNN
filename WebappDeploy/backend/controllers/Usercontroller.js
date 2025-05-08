@@ -5,6 +5,7 @@ const passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&*()_\-+={}[\]|\\:;"'<>,.
 
 exports.addUser = async (req, res) => { // Add new user
     try {
+        console.log("📥 Incoming request body:", req.body);
         const { Username, Password, IsZeus, IsOwner } = req.body;
 
         if (!passwordRegex.test(Password)) { // Check password

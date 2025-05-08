@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Register.css"
 
 const Register = () => {
-  const [formData, setFormData] = useState({ username: "", password: "" }); // Store data
+  const [formData, setFormData] = useState({ Username: "", Password: "" }); // Store data
   const [error, setError] = useState(""); // Store error messages
   const navigate = useNavigate();
 

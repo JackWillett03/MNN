@@ -28,7 +28,7 @@ mongoose
 
 app.use(express.json());
 
-app.use(cors("https://manticore-news-network.onrender.com"));
+app.use(cors(`https://manticore-news-network.onrender.com`));
 
 app.use((req, res, next) => {
   req.io = io;

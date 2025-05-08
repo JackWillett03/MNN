@@ -1,0 +1,144 @@
+.article-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+    overflow: hidden; /* Prevent content from overflowing */
+  }
+  
+  .article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  }
+  
+  .back-button,
+  .login-but {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #0077cc;
+    padding: 8px 15px; /* Add padding for better clickability */
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .article-title {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 20px; /* Add space below the title */
+  }
+  
+  .article-meta p {
+    margin: 8px 0; /* Increased space between meta info */
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .article-body {
+    margin-top: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensures long words will wrap to the next line */
+    overflow-wrap: break-word; /* Prevents long words from spilling out */
+  }
+
+  .article-content {
+    width: 100%; /* Ensure the content takes the full width of its parent */
+  }
+  
+  .article-footer {
+    margin-top: 40px;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.9rem; /* Smaller font for footer */
+    color: #777;
+  }
+  
+  .article-body img {
+    max-width: 100%; /* Ensures images fit within the container */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+  /* Comment Section Styles */
+  .comments-section {
+    margin-top: 40px;
+  }
+  
+  .comments-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .comment-input {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .submit-comment {
+    align-self: flex-start;
+    padding: 8px 15px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .submit-comment:hover {
+    background-color: #005fa3;
+  }
+  
+  .comments-list {
+    margin-top: 20px;
+  }
+  
+  .comment-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .comment-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .comment-username {
+    font-weight: bold;
+  }
+  
+  .comment-date {
+    color: #777;
+  }
+  
+  .comment-content {
+    font-size: 1rem;
+    color: #333;
+  }
+  

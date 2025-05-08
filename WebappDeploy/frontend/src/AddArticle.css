@@ -1,0 +1,50 @@
+
+/* Ensure ReactQuill editor content is within a controlled container */
+.add-article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .ql-editor {
+    line-height: 1.6; /* Adjust the line height to make the text look better */
+    text-align: left; /* Default alignment */
+    word-wrap: break-word; /* Ensures text wraps inside the container */
+    overflow-wrap: break-word; /* Prevents text from spilling out */
+  }
+  
+  /* Align text when specific alignments are chosen in the editor */
+  .ql-align-center {
+    text-align: center;
+  }
+  
+  .ql-align-right {
+    text-align: right;
+  }
+  
+  
+  .add-article-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .add-article-form input,
+  .add-article-form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  
+  .add-article-form .ql-editor {
+    min-height: 200px;
+  }
+  
+  .add-article-form button {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  

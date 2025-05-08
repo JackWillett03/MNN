@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { io } from 'socket.io-client';
 import './MainPage.css';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('http://localhost:9000');
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -62,18 +60,6 @@ const MainPage = () => {
         setIsLoggedIn(false);
       }
     }
-  }, []);
-  
-
-  useEffect(() => {
-    socket.on('articleUpdated', (message) => {
-      setArticleUpdates(message);
-      alert(message);
-    });
-
-    return () => {
-      socket.off('articleUpdated');
-    };
   }, []);
 
   useEffect(() => {

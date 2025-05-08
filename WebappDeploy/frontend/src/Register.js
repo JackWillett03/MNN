@@ -25,7 +25,7 @@ const Register = () => {
 
       if (!response.ok) { // Mainly to pick up error code if username are not unique
         const result = await response.json(); 
-        throw new Error(error.message || "Registration failed"); // Throw error message
+        throw new Error(error.message || "Password requires 8 characters, 1 capital, 1 number and a symbol "); // Throw error message
       }
       navigate("/login"); // If successful go to login page
     } catch (error) {

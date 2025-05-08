@@ -20,6 +20,7 @@ const io = new Server(server, {
 dotenv.config(); // Load environment variables
 
 // MongoDB connection
+console.log("📦 MongoDB connection string:", process.env.CONNECTION);
 const mongoURL = process.env.CONNECTION; // Connection string
 mongoose
   .connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true })

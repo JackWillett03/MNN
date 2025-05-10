@@ -27,7 +27,7 @@ mongoose
   .then(() => console.log('Connected to MongoDB successfully'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
-app.use(express.json());
+app.use(express.json({ limit: '600kb' }));
 
 app.use(cors({
   origin: "https://manticore-news-network.onrender.com",
@@ -35,7 +35,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.use(express.json({ limit: '500kb' }));
 
 app.use((req, res, next) => {
   req.io = io;

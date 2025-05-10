@@ -29,7 +29,12 @@ mongoose
 
 app.use(express.json());
 
-app.use(cors(`https://manticore-news-network.onrender.com`));
+app.use(cors({
+  origin: "https://manticore-news-network.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 
 app.use((req, res, next) => {
   req.io = io;

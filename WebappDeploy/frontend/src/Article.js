@@ -114,6 +114,11 @@ const ArticlePage = () => {
           <p><strong>Continent:</strong> {article.continent}</p>
           <p><strong>Country:</strong> {article.country}</p>
         </div>
+        {article.coverImageUrl && (
+            <div className="article-cover-image">
+              <img src={article.coverImageUrl} alt="Article Cover" className="cover-image" />
+            </div>
+          )}
         <div
           className="article-body"
           dangerouslySetInnerHTML={{ __html: article.content }}
